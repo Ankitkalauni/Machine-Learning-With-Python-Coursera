@@ -10,7 +10,7 @@ K-Nearest Neighbors is an algorithm for supervised learning. Where the data is '
 
 ### Here's an visualization of the K-Nearest Neighbors algorithm.
 
-<img src="https://ibm.box.com/shared/static/mgkn92xck0z05v7yjq8pqziukxvc2461.png">
+![KNN Classifier Image](https://ibm.box.com/shared/static/mgkn92xck0z05v7yjq8pqziukxvc2461.png)
 
 
 In this case, we have data points of Class A and B. We want to predict what the star (test data point) is. If we consider a k value of 3 (3 nearest data points) we will obtain a prediction of Class B. Yet if we consider a k value of 6, we will obtain a prediction of Class A.
