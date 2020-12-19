@@ -2,6 +2,7 @@
 import numpy as np 
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
+from matplotlib import pyplot as plt
 
 #reading csv file
 df = pd.read_csv(r'drug200.csv')
@@ -44,11 +45,12 @@ import pydotplus
 import matplotlib.image as mpimg
 from sklearn import tree
 
+
 dot_data = StringIO()
 filename = "drugtree.png"
-featureNames = my_data.columns[0:5]
-targetNames = my_data["Drug"].unique().tolist()
-out=tree.export_graphviz(drugTree,feature_names=featureNames, out_file=dot_data, class_names= np.unique(y_trainset), filled=True,  special_characters=True,rotate=False)  
+featureNames = df.columns[0:5]
+targetNames = df["Drug"].unique().tolist()
+out=tree.export_graphviz(dtree,feature_names=featureNames, out_file=dot_data, class_names= np.unique(y_train), filled=True,  special_characters=True,rotate=False)  
 graph = pydotplus.graph_from_dot_data(dot_data.getvalue())  
 graph.write_png(filename)
 img = mpimg.imread(filename)
