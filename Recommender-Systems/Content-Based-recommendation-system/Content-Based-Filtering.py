@@ -91,9 +91,3 @@ recommendationTable_df.head()
 
 #The final recommendation table
 movie.loc[movie['movieId'].isin(recommendationTable_df.head(20).keys())]
-
-
-
-
-
-
