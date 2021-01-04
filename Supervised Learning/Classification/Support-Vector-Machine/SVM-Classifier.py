@@ -94,24 +94,7 @@ plt.figure()
 plot_confusion_matrix(cnf_matrix, classes=['Benign(2)','Malignant(4)'],normalize= False,  title='Confusion matrix')
 
 from sklearn.metrics import f1_score
-f1_score(y_test, yhat, average='weighted') 
+print(f1_score(y_test, yhat, pos_label ='Benign')) 
 
 from sklearn.metrics import jaccard_score
-print(jaccard_score(y_test, yhat, average=None ))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(jaccard_score(y_test, yhat, pos_label ='Benign'))
